@@ -25,7 +25,6 @@ jobs:
 
     - name: Run Tests
       run: |
-        # Run your tests and capture the output
         test_output=$(npm test)
         # Check if the output contains a specific string or pattern
         if [[ ! $test_output == *"failed"* ]]; then
