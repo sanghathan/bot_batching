@@ -11,7 +11,7 @@ test('basic', async () => {
     const rand = Math.floor(Math.random() * 300)
     console.log(`random number in basic test is: ${rand}`)
     await delay(rand * 1000)
-    if (rand <= 30) {
+    if (rand < 20) {
         expect(sum()).toBe(0);
     } else {
         expect(sum()).toBe(1);
