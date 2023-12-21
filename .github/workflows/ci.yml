@@ -1,7 +1,7 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
     - name: Debug
       run: |
         ls -la /home/runner/work/
@@ -24,4 +24,13 @@ jobs:
       run: npm install
 
     - name: Run Tests
-      run: npm test
+      run: |
+        # Run your tests and capture the output
+        test_output=$(npm test)
+        # Check if the output contains a specific string or pattern
+        if [[ ! $test_output == *"failed"* ]]; then
+          echo "Tests passed successfully"
+        else
+          echo "Tests failed or produced unexpected output"
+          exit 1
+        fi
