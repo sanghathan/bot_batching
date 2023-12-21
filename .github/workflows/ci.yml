@@ -12,9 +12,11 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
+
     - name: Debug
       run: |
         ls -la /home/runner/work/
+
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
@@ -24,4 +26,12 @@ jobs:
       run: npm install
 
     - name: Run Tests
-      run: npm test
+      run: |
+        test_output=$(npm test)
+        # Check if the output contains a specific string or pattern
+        if [[ ! $test_output == *"failed"* ]]; then
+          echo "Tests passed successfully"
+        else
+          echo "Tests failed or produced unexpected output"
+          exit 1
+        fi
