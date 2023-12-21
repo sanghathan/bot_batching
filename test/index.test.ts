@@ -12,9 +12,9 @@ test('basic', async () => {
     console.log(`random number in basic test is: ${rand}`)
     await delay(rand * 1000)
     if (rand < 10) {
-        expect(sum()).toBe(0);
-    } else {
         expect(sum()).toBe(1);
+    } else {
+        expect(sum()).toBe(0);
     }
 
 }, 300000 /* optional timeout */);
