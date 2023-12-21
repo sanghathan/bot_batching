@@ -25,3 +25,20 @@ jobs:
 
     - name: Run Tests
       run: npm test
+
+    - name: Set status check
+      if: always()
+      uses: g actions/github-script@v6
+      with:
+        script: |
+          const github = context.github;
+          const status = {
+            owner: github.context.repo.owner,
+            repo: github.context.repo.repo,
+            sha: github.context.sha,
+            state: 'success', // or 'failure'
+            target_url: 'URL_TO_TEST_RESULTS',
+            description: 'Tests passed', // or a custom description
+            context: 'continuous-integration/tests'
+          };
+          await github.repos.createCommitStatus(status);
