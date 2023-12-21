@@ -10,26 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-    - name: Debug
-      run: |
-        ls -la /home/runner/work/
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Debug
+        run: |
+          ls -la /home/runner/work/
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Run Tests
-      run: |
-        test_output=$(npm test)
-        # Check if the output contains a specific string or pattern
-        if [[ ! $test_output == *"failed"* ]]; then
-          echo "Tests passed successfully"
-        else
-          echo "Tests failed or produced unexpected output"
-          exit 1
-        fi
+      - name: Run Tests
+        run: |
+          test_output=$(npm test)
+          # Check if the output contains a specific string or pattern
+          if [[ ! $test_output == *"failed"* ]]; then
+            echo "Tests passed successfully"
+          else
+            echo "Tests failed or produced unexpected output"
+            exit 1
+          fi
+          if [[ $? -eq 0 ]]; then
+            echo "Output check passed"
+          else
+            echo "Output check failed"
+            exit 1
+          fi        
