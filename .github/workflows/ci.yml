@@ -35,9 +35,3 @@ jobs:
           echo "Tests failed or produced unexpected output"
           exit 1
         fi
-      if [[ $? -eq 0 ]]; then
-        echo "Output check passed"
-      else
-        echo "Output check failed"
-        exit 1
-      fi        
