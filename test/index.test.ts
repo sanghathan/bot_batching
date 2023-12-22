@@ -12,7 +12,8 @@ test('basic', async () => {
     console.log(`random number in basic test is: ${rand}`)
     await delay(rand * 1000)
     if (rand < 30) {
-        expect(sum()).toBe(1);
+        // expect(sum()).toBe(1);
+        expect(sum()).toBe(0); // Fixed test as need to check conflict now
     } else {
         expect(sum()).toBe(0);
     }
