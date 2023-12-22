@@ -13,7 +13,7 @@ test('basic', async () => {
     await delay(rand * 1000)
     if (rand < 30) {
         // expect(sum()).toBe(1);
-        expect(sum()).toBe(0); // conflict playground
+        expect(sum()).toBe(0); // conflict_test_2
     } else {
         expect(sum()).toBe(0);
     }
