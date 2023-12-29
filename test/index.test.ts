@@ -1,3 +1,4 @@
+// 1229_1109_no_conflict
 import { sum } from '../src';
 
 function delay(ms: number) {
