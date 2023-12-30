@@ -16,7 +16,7 @@ filename="file_$timestamp.txt"
 remote=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f1)
 remote_branch=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f2)
 
-git remote add $remote https://github.com/$remote/bot_batching.git 
+git remote add $remote https://$GH_TOKEN@github.com/$remote/bot_batching.git 
 git fetch $remote
 git checkout -b $remote-$remote_branch $remote/$remote_branch
 
@@ -40,7 +40,7 @@ git add ${filename}
 echo "gonna run: git commit -m \"bot added\""
 git commit -m "bot added"
 echo "git log...."
-git log
+git log --oneline
 echo "git remote -v...."
 git remote -v
 

@@ -29,3 +29,5 @@ jobs:
       run: |
         chmod +x increment_version.sh
         ./increment_version.sh
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
