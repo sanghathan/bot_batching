@@ -26,3 +26,4 @@ jobs:
         chmod +x increment_version.sh
         ./increment_version.sh
         git status
+        exit $?
