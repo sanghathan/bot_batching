@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo "git config emails....."
 git config --global user.email "amit.tiwari@gmail.com"
 echo "git config user name..."
