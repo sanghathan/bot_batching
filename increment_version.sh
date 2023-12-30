@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-echo "git config emails..."
+echo "git config emails....."
 git config --global user.email "amit.tiwari@gmail.com"
 echo "git config user name..."
 git config --global user.name "Ice Tee"
