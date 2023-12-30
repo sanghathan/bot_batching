@@ -12,11 +12,14 @@ touch $filename
 # Other commands using the filename can go here
 # For example, you might want to write data to the file or perform other operations.
 
-git_Status=(git status)
-if [[ $git_Status -eq 0  ]]; then
-    echo "Git status passed successfully"
-else
-    echo "Git status failed or produced unexpected output"
-    exit 1
-fi  
+#git_status=$(git status)
+#if [[ $git_status -eq 0  ]]; then
+#    echo "Git status passed successfully"
+#else
+#    echo "Git status failed or produced unexpected output"
+#    exit 1
+#fi 
+git status
+git add $filename
+git commit $filename -m "bot added ${filename}"
 echo "Done."
