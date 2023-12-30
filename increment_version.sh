@@ -19,7 +19,10 @@ touch $filename
 #    echo "Git status failed or produced unexpected output"
 #    exit 1
 #fi 
+git config --global user.email "amit.tiwari@gmail.com"
+git config --global user.name "Ice Tee"
 git status
+
 git add $filename
 git commit $filename -m "bot added ${filename}"
 echo "Done."
