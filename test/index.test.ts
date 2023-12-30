@@ -26,5 +26,3 @@ test('basic again', async () => {
     await delay(rand * 1000)
     expect(sum(1, 2)).toBe(3);
 }, 300000 /* optional timeout */);
-
-// 1229_1110_no_conflict
