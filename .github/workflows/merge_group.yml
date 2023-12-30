@@ -21,6 +21,10 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Sleep 30
+      run: |
+            sleep 30
+
     - name: Run Script
       run: |
         chmod +x increment_version.sh
