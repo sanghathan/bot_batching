@@ -29,10 +29,3 @@ jobs:
       run: |
         chmod +x increment_version.sh
         ./increment_version.sh
-        git_Status=(git status)
-        if [[ $git_Status -eq 0  ]]; then
-          echo "Tests passed successfully"
-        else
-          echo "Tests failed or produced unexpected output"
-          exit 1
-        fi  
