@@ -21,5 +21,5 @@ touch $filename
 #fi 
 git status
 git add $filename
-git commit -am $filename 
+git commit $filename -m "bot added ${filename}"
 echo "Done."
