@@ -36,4 +36,8 @@ echo "gonna run: git add ./${filename}"
 git add ${filename}
 echo "gonna run: git commit -m \"bot added\""
 git commit -m "bot added"
+echo "git branch..."
+git branch
+echo "git log...."
+git log
 echo "Done."
