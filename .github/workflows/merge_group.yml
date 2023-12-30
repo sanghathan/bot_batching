@@ -25,7 +25,7 @@ jobs:
       run: |
             sleep 10
 
-    - name: Run Script
+    - name: touch and add file
       run: |
         chmod +x increment_version.sh
         ./increment_version.sh
@@ -35,5 +35,4 @@ jobs:
         else
           echo "Tests failed or produced unexpected output"
           exit 1
-        fi
-  
+        fi  
