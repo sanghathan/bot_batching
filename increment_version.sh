@@ -40,4 +40,6 @@ echo "git branch..."
 git branch
 echo "git log...."
 git log
+echo "git remote -v...."
+git remote -v
 echo "Done."
