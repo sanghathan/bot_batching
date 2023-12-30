@@ -21,11 +21,11 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Sleep 20
+    - name: Sleep 10 before
       run: |
-            sleep 20
+            sleep 10
 
-    - name: Run Script
+    - name: touch and add file
       run: |
         chmod +x increment_version.sh
         ./increment_version.sh
@@ -35,8 +35,4 @@ jobs:
         else
           echo "Tests failed or produced unexpected output"
           exit 1
-        fi
-    - name: Sleep 30 after
-      run: |
-            sleep 30
-  
+        fi  
