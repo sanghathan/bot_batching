@@ -24,5 +24,5 @@ git config --global user.name "Ice Tee"
 git status
 
 git add $filename
-git commit $filename -m "bot added ${filename}"
+git commit -m "bot added ${filename}"
 echo "Done."
