@@ -1,4 +1,4 @@
-name: PULL_REQUEST
+name: Merge Grp
 
 on:
   merge_group:
