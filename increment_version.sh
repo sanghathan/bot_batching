@@ -40,7 +40,7 @@ git add ${filename}
 echo "gonna run: git commit -m \"bot added\""
 git commit -m "bot added"
 echo "git log...."
-git log
+git log --oneline
 echo "git remote -v...."
 git remote -v
 
