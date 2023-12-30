@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  merge_group_job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
