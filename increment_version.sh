@@ -8,7 +8,8 @@ filename="file_$timestamp.txt"
 # Use the filename in your script or command
 echo "Creating $filename..."
 touch $filename
-
+echo "Listing files..."
+ls -latr
 # Other commands using the filename can go here
 # For example, you might want to write data to the file or perform other operations.
 
@@ -23,6 +24,6 @@ git config --global user.email "amit.tiwari@gmail.com"
 git config --global user.name "Ice Tee"
 git status
 
-git add $filename
+git add ./$filename
 git commit -m "bot added ${filename}"
 echo "Done."
