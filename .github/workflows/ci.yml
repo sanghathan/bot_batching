@@ -5,7 +5,6 @@ on:
     types:
       - opened
       - synchronize    
-  merge_group:
     branches:
       - main
 
@@ -40,22 +39,3 @@ jobs:
           echo "Tests failed or produced unexpected output"
           exit 1
         fi
-  merge_group_job:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Run Script
-      run: |
-        chmod +x increment_version.sh
-        ./increment_version.sh
