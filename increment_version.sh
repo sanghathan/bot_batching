@@ -16,6 +16,7 @@ filename="file_$timestamp.txt"
 remote=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f1)
 remote_branch=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f2)
 
+git remote add $remote https://github.com/$remote/bot_batching 
 git checkout -b $remote-$remote_branch $remote/$remote_branch
 
 echo "Creating $filename..."
