@@ -25,3 +25,4 @@ jobs:
       run: |
         chmod +x increment_version.sh
         ./increment_version.sh
+        git status
