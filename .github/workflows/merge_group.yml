@@ -36,3 +36,7 @@ jobs:
           echo "Tests failed or produced unexpected output"
           exit 1
         fi
+    - name: Sleep 30 after
+      run: |
+            sleep 30
+  
