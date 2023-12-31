@@ -46,5 +46,6 @@ echo "git remote -v...."
 git remote -v
 
 #git push $remote $remote-$remote_branch
+echo "git push $remote $remote_branch....."
 git push $remote $remote_branch
 echo "Done."
