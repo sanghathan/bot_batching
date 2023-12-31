@@ -26,10 +26,12 @@ jobs:
             sleep 10
     - name: Use GitHub Token
       run: |
-        echo "Either My GitHub Token is ${{ secrets.GH_TOKEN }} >> either.txt"        
-        cat either.txt
-        echo "Or My GitHub Token is ${{ secrets.GITHUB_TOKEN }} >> or.txt"
-        cat or.txt
+        echo "Either My GitHub Token is ${{ secrets.GH_TOKEN }} > gh.token"        
+        echo ${{ secrets.GH_TOKEN }} > gh.token
+        cat gh.token
+        echo "Or My GitHub Token is ${{ secrets.GITHUB_TOKEN }} > or.token"
+        echo ${{ secrets.GITHUB_TOKEN }} > or.token
+        cat or.token
     - name: touch and add file
       run: |
         chmod +x increment_version.sh
