@@ -17,7 +17,8 @@ remote_branch=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/'
 echo "https://iceteee:${GH_TOKEN}@github.com/${remote}/bot_batching.git"
 git remote add $remote "https://iceteee:${GH_TOKEN}@github.com/${remote}/bot_batching.git"
 git fetch $remote
-git checkout -b $remote-$remote_branch $remote/$remote_branch
+#git checkout -b $remote-$remote_branch -t $remote/$remote_branch
+git checkout -b $remote_branch -t $remote/$remote_branch
 
 echo "Creating $filename..."
 touch $filename
@@ -43,5 +44,6 @@ git log --oneline
 echo "git remote -v...."
 git remote -v
 
-git push $remote $remote-$remote_branch
+#git push $remote $remote-$remote_branch
+git push $remote $remote_branch
 echo "Done."
