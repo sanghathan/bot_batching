@@ -8,7 +8,7 @@ git config --global user.name "Ice Tee"
 # Get the current timestamp in the format YYYYMMDD_HHMMSS
 timestamp=$(date +"%Y%m%d_%H%M%S")
 
-# Create a filename based on the timestamp
+# Create a filename based on the timestamps
 filename="file_$timestamp.txt"
 
 
