@@ -13,7 +13,7 @@ filename="file_$timestamp.txt"
 
 
 remote=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f1)
-remote="origin"
+remote="origin2"
 #remote_branch=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f2)
 remote_branch="mv_to_pr"
 echo "https://iceteee:${GH_TOKEN}@github.com/${remote}/bot_batching.git"
