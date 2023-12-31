@@ -13,6 +13,7 @@ filename="file_$timestamp.txt"
 
 
 remote=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f1)
+remote="sanghathan"
 remote_branch=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f2)
 echo "https://iceteee:${GH_TOKEN}@github.com/${remote}/bot_batching.git"
 git remote add $remote "https://iceteee:${GH_TOKEN}@github.com/${remote}/bot_batching.git"
