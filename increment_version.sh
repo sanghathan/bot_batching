@@ -17,7 +17,7 @@ remote="origin2"
 #remote_branch=$(git log -1 --pretty=%B | head -n 1 |awk '{print $NF}'|cut -d '/' -f2)
 remote_branch="mv_to_pr"
 echo "https://iceteee:${GH_TOKEN}@github.com/${remote}/bot_batching.git"
-git remote add $remote "https://iceteee:${GH_TOKEN}@github.com/${remote}/bot_batching.git"
+git remote add $remote "https://iceteee:${GH_TOKEN}@github.com/sanghathan/bot_batching.git"
 git fetch $remote
 #git checkout -b $remote-$remote_branch -t $remote/$remote_branch
 git checkout -b $remote_branch -t $remote/$remote_branch
