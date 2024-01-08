@@ -14,7 +14,7 @@ test('basic', async () => {
     await delay(rand * 1000)
     if (rand < 30) {
         // expect(sum()).toBe(1);
-        expect(sum()).toBe(0);
+        expect(sum()).toBe(0); // base will also change this
     } else {
         expect(sum()).toBe(0);
     }
