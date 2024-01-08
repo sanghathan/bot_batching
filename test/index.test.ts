@@ -1,3 +1,4 @@
+// copyright
 import { sum } from '../src';
 
 function delay(ms: number) {
