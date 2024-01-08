@@ -39,3 +39,13 @@ jobs:
         ./increment_version.sh
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    - name: Run Tests
+      run: |
+        test_output=$(npm test)
+        # Check if the output contains a specific string or pattern
+        if [[ ! $test_output == *"failed"* ]]; then
+          echo "Tests passed successfully"
+        else
+          echo "Tests failed or produced unexpected output"
+          exit 1
+        fi        
