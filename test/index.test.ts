@@ -8,7 +8,7 @@ function delay(ms: number) {
 
 
 test('basic', async () => {
-    const rand = Math.floor(Math.random() * 100) //300
+    const rand = Math.floor(Math.random() * 300) //300
     console.log(`random number in basic test is: ${rand}`)
     await delay(rand * 1000)
     if (rand < 30) {
